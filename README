@@ -1,0 +1,11 @@
+Rename "skeleton" dir to something more project specific, also change any references to skeleton to this new name.
+The directory structure is not fixed; you can make it basically whatever you want, just change imports accordingly.
+
+Also change the value of 'cookie_secret' in web.py by running this in python for each app:
+	import base64
+	import uuid
+	base64.b64encode(uuid.uuid4().bytes + uuid.uuid4().bytes)
+
+requires:
+	python 2.6 or 2.7
+	tornado

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>{% block page_title %}Home{% end %}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+	<div class="header">
+		<h1>{% block header_title %}Tornado Skeleton{% end %}</h1>
+	</div>
+	<div class="top-nav">
+		{% if current_user %}
+			<div class="right">
+				Welcome, {{ current_user.username }}!
+			</div>
+		{% end %}
+		<ul>
+			<li><a href="/" >home</a></li>
+			{% if not current_user %}
+				<li><a href="/login" >login</a></li>
+			{% else %}
+				<li><a href="/admin" >admin</a></li>
+				<li><a href="/logout" >logout</a></li>
+			{% end %}
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="wrapper">
+		{% block page_content %}Make sure to extend this template by using the "page_content" block.{% end %}
+	</div>
+	<div class="footer">
+		Tornado web skeleton by Decultured
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+</body>
+</html>

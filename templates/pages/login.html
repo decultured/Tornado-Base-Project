@@ -1,0 +1,23 @@
+{% extends "../wrappers/home.html" %}
+{% block page_title %}{{ title }}{% end %}
+
+{% block page_content %}
+
+<h1>Login:</h1>
+<br />
+{% if login_error %}
+	<div class="error">
+		{{ login_error }}
+	</div>
+	<br />
+{% end %}
+<form action="/login" method="post">
+	{{ xsrf_form_html() }}
+	<h3>Name: <br /><input type="text" name="name"></h3>
+	<br />
+	<h3>Password: <br /><input type="password" name="password"></h3>
+	<br />
+	<input type="submit" value="Sign in">
+</form>
+
+{% end %}
