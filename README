@@ -6,6 +6,11 @@ Some basic features are included as a starting point, but should be expanded/ada
 	Basic Templating and Wrapper examples
 	Basic css and wrapper adapter from the HTML5 boilerplate project
 
+Caveat Emptor: 
+	I started this project while new to both Tornado and Python.  Use this project at your own risk, feedback is welcomed.
+
+Before using you should:
+
 Change the value of 'cookie_secret' in web.py by running this in python for each app:
 	import base64
 	import uuid
@@ -14,3 +19,9 @@ Change the value of 'cookie_secret' in web.py by running this in python for each
 requires:
 	python 2.6 or 2.7
 	tornado
+	
+TODO:
+	Implement basic ORM features
+	Better User Auth
+	Include basic db structure (users, more?)
+	Startup Script
