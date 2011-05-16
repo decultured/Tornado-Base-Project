@@ -1,7 +1,12 @@
-Rename "skeleton" dir to something more project specific, also change any references to skeleton to this new name.
-The directory structure is not fixed; you can make it basically whatever you want, just change imports accordingly.
+This skeleton is adapted from a variety of base projects and demos found across the web.
 
-Also change the value of 'cookie_secret' in web.py by running this in python for each app:
+Some basic features are included as a starting point, but should be expanded/adapted/removed depending on the particular application:
+	Basic user auth (could be more secure)
+	Basic DB interaction
+	Basic Templating and Wrapper examples
+	Basic css and wrapper adapter from the HTML5 boilerplate project
+
+Change the value of 'cookie_secret' in web.py by running this in python for each app:
 	import base64
 	import uuid
 	base64.b64encode(uuid.uuid4().bytes + uuid.uuid4().bytes)
