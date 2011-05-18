@@ -1,4 +1,4 @@
-This skeleton is adapted from a variety of base projects and demos found across the web.
+This skeleton is adapted from a variety of base projects and demos found across the web and in tornado's own documentation.
 
 Some basic features are included as a starting point, but should be expanded/adapted/removed depending on the particular application:
 	Basic user auth (could be more secure)
@@ -7,7 +7,12 @@ Some basic features are included as a starting point, but should be expanded/ada
 	Basic css and wrapper adapter from the HTML5 boilerplate project
 
 Caveat Emptor: 
-	I started this project while new to both Tornado and Python.  Use this project at your own risk, feedback is welcomed.
+	I started this project while new to both Tornado and Python.
+	Use this project at your own risk, feedback is welcomed.
+
+requires:
+	python 2.6 or 2.7
+	tornado
 
 Before using you should:
 
@@ -16,10 +21,6 @@ Change the value of 'cookie_secret' in web.py by running this in python for each
 	import uuid
 	base64.b64encode(uuid.uuid4().bytes + uuid.uuid4().bytes)
 
-requires:
-	python 2.6 or 2.7
-	tornado
-	
 TODO:
 	Implement basic ORM features
 	Better User Auth
